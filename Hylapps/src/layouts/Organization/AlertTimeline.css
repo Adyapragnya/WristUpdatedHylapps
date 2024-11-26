@@ -1,0 +1,39 @@
+/* AlertTimeline.css */
+.alert-timeline {
+    margin: 20px;
+  }
+  
+  .alert-timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .alert-timeline-table th,
+  .alert-timeline-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .alert-timeline-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .alert-timeline-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .alert-timeline-table {
+      font-size: 14px;
+    }
+  
+    .alert-timeline-table th,
+    .alert-timeline-table td {
+      padding: 8px;
+    }
+  }
+  

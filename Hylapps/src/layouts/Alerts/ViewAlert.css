@@ -1,0 +1,47 @@
+.alert-form-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .alert-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .alert-table th, .alert-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .alert-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .alert-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .alert-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+  }
+  
+  p {
+    text-align: center;
+    color: #666;
+  }
+  

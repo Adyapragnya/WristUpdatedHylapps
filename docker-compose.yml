@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  backend:
+    build: ./backend
+    container_name: mern-backend
+    restart: always
+    ports:
+      - '5000:5000'
+    networks:
+      - mern-network
+
+  frontend:
+    build: ./Hylapps
+    container_name: mern-frontend
+    restart: always
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+    networks:
+      - mern-network
+
+  mongodb:
+    image: mongo
+    container_name: mern-mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - '27017:27017'
+    networks:
+      - mern-network
+
+networks:
+  mern-network:
+    driver: bridge
+
+volumes:
+  mongo-data:

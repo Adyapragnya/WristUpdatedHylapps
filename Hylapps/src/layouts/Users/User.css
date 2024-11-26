@@ -1,0 +1,269 @@
+.alert-form-container {
+  max-width: 85%;
+  margin: 20px auto;
+  margin-top: -40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.alert-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.alert-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.alert-form h3 {
+  margin-top: 15px;
+  color: #0F67B1;
+}
+
+.alert-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.alert-form input,
+.alert-form textarea,
+.alert-form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Two-column layout for specific input fields */
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 15px; /* Space between the columns */
+}
+
+/* Button container for Save and Cancel buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.save-button,
+.cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Save button style */
+.save-button {
+  background-color: #28a745; /* Green background */
+}
+
+.save-button:hover {
+  background-color: #218838; /* Darker green on hover */
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+/* Cancel button style */
+.cancel-button {
+  background-color: #dc3545; /* Red background */
+}
+
+.cancel-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alert-form-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+
+/* From Uiverse.io by Juanes200122 */ 
+.container_SevMini {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Ghost {
+  transform: translate(0px, -25px);
+  z-index: -1;
+  animation: opacidad 4s infinite ease-in-out;
+}
+
+@keyframes opacidad {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+    scale: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes estroboscopico {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  51% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rebote {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes estroboscopico1 {
+  0%,
+  50%,
+  100% {
+    fill: rgb(255, 95, 74);
+  }
+
+  25%,
+  75% {
+    fill: rgb(16, 53, 115);
+  }
+}
+
+@keyframes estroboscopico2 {
+  0%,
+  50%,
+  100% {
+    fill: #17e300;
+  }
+
+  25%,
+  75% {
+    fill: #17e300b4;
+  }
+}
+
+.SevMini {
+  animation: rebote 4s infinite ease-in-out;
+}
+
+#strobe_led1 {
+  animation: estroboscopico 0.5s infinite;
+}
+
+#strobe_color1 {
+  animation: estroboscopico2 0.8s infinite;
+}
+
+#strobe_color3 {
+  animation: estroboscopico1 0.8s infinite;
+  animation-delay: 3s;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-group button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.button-group button[type='submit'] {
+  background-color: #28a745;
+  color: white;
+}
+
+.button-group button[type='button'] {
+  background-color: #dc3545;
+  color: white;
+}
+
+.button-group button:hover {
+  filter: brightness(1.05);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .alert-form-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

@@ -1,0 +1,16 @@
+/* CSS for the GeofenceType color highlighting */
+.geofence-berth {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .geofence-terminal {
+    color: blue;
+    font-weight: bold;
+  }
+  
+  .geofence-anchorage {
+    color: green;
+    font-weight: bold;
+  }
+  

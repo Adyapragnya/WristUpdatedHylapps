@@ -1,0 +1,141 @@
+.map-timeline-container {
+  display: flex; /* Use flexbox to align cards side by side */
+  justify-content: flex-start; /* Align items to the start */
+  align-items: flex-start; /* Align items at the start */
+  max-width: 1200px; /* Max width for the container */
+  margin: 20px auto; /* Center the container */
+}
+
+.map-card {
+  flex: 1; /* Allow the map card to take available space */
+  background-color: #ffffff; /* Card background color */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+  overflow: hidden; /* Hide overflow for rounded corners */
+}
+
+.map-card .leaflet-container {
+  height: 100%; /* Ensure the map container takes full height of the card */
+  border-radius: 12px; /* Rounded corners for the map */
+}
+
+@media (max-width: 768px) {
+  .map-timeline-container {
+    flex-direction: column; /* Stack the timeline and map on smaller screens */
+  }
+  .map-timeline-container > div {
+    margin-right: 0; /* Remove right margin in column layout */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+  .map-card {
+    height: 450px; /* Adjust map height for smaller screens if needed */
+  }
+}
+
+
+.map-timeline-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.vessel-info {
+  flex: 0 0 300px; /* Fixed width for vessel info */
+  margin-right: 20px;
+  padding: 10px;
+  border: 1px solid #e0e0e0; /* Light border for separation */
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline h4 {
+  margin-bottom: 10px;
+}
+
+.timeline ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 30px; /* Space for timeline dot */
+  margin-bottom: 15px; /* Space between items */
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 10px; /* Centered with the text */
+  width: 10px;
+  height: 10px;
+  background-color: #313fff; /* Color for the timeline dot */
+  border-radius: 50%; /* Circular dot */
+}
+
+.timeline-content {
+  font-size: 14px; /* Adjust font size */
+  color: #333; /* Text color */
+}
+
+.map-timeline-container {
+  display: flex;
+  flex-direction: row; /* Keep items in a row */
+  gap: 20px; /* Optional: Add spacing between items */
+}
+
+.vessel-info {
+  flex: 1; /* This makes vessel-info take up 50% of the available space */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 400px; /* Optional: Set a max-width for the vessel-info section */
+}
+
+.vessel-info h4 {
+  margin-bottom: 20px;
+}
+
+.voyage-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.voyage-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.voyage-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.voyage-table td:first-child {
+  font-weight: bold;
+}
+
+.voyage-table tr {
+  border-bottom: 1px solid #ddd;
+  font-size: 17px !important;
+}
+
+.voyage-table tr:last-child {
+  border-bottom: none;
+}
+
+.map-card {
+  flex: 1; /* This makes the map take up the remaining space */
+}
+
+@media (max-width: 768px) {
+  .map-timeline-container {
+    flex-direction: column; /* Stack them vertically on small screens */
+  }
+}
+

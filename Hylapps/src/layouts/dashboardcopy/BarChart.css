@@ -1,0 +1,81 @@
+.chart-container-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px; /* Add padding for spacing on all sides */
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between; /* Space between heading and button */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 20px; /* Space below header */
+  text-align: center; /* Center text */
+}
+
+.chart-header h2 {
+  font-size: 24px; /* Heading font size */
+  margin: 0; /* Remove default margin */
+  color: #333; /* Enhance readability */
+}
+
+.download-btn {
+  background-color: #4caf50; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 15px; /* Button padding */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 14px; /* Button text size */
+}
+
+.download-btn:hover {
+  background-color: #45a049; /* Button hover background color */
+}
+
+.chart-container {
+  width: 100%;
+  height: 400px; /* Adjust height as per your requirement */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center chart horizontally */
+  align-items: center; /* Center chart vertically */
+}
+
+@media (max-width: 768px) {
+  .chart-header {
+    flex-direction: column; /* Stack the heading and button vertically */
+    align-items: center; /* Center items in column layout */
+  }
+
+  .chart-header h2 {
+    font-size: 22px; /* Slightly smaller font for medium devices */
+  }
+
+  .download-btn {
+    font-size: 13px; /* Smaller font size for button */
+    padding: 8px 12px; /* Adjust padding for button */
+  }
+
+  .chart-container {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-header {
+    flex-direction: column; /* Ensure vertical stacking on very small screens */
+    align-items: center; /* Center items */
+  }
+
+  .chart-header h2 {
+    font-size: 20px; /* Smaller font size for very small devices */
+  }
+
+  .download-btn {
+    font-size: 12px; /* Smaller font size for button */
+    padding: 6px 10px; /* Adjust padding for button */
+  }
+
+  .chart-container {
+    height: 250px; /* Reduce chart height for mobile screens */
+  }
+}

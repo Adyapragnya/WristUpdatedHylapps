@@ -1,0 +1,15 @@
+/* VesselsGrid.css */
+.reactdatagrid .reactdatagrid-header-menu {
+    z-index: 1000; /* Ensure the dropdown menu appears above other elements */
+    position: absolute; /* Allow the dropdown to be positioned outside of the parent container */
+    background-color: #ffffff; /* Ensure the menu has a solid background for visibility */
+  }
+  
+  
+  /* VesselsGrid.css */
+.react-grid-header {
+    background-color: blue !important;
+    color: white !important;
+  }
+
+  

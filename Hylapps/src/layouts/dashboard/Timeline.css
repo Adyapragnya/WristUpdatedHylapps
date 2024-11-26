@@ -1,0 +1,186 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing evenly */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    max-width: 100%;
+    margin: 20px auto; /* Center the timeline */
+    padding: 20px 10px; /* Add padding on the sides */
+    position: relative; /* Position for the connecting line */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Aligns the line with the timeline items */
+    left: 50%; /* Center the line */
+    transform: translateX(-50%); /* Center line */
+    height: 2px; /* Thickness of the line */
+    background-color: #0F67B1; /* Line color */
+    z-index: 0; /* Places line behind items */
+    width: 100%; /* Ensure line stretches across the timeline */
+}
+
+.timeline-item {
+    position: relative;
+    flex: 1; /* Allow items to grow */
+    margin: 0 10px; /* Space between items */
+    min-width: 150px; /* Ensure the items have a minimum width */
+    text-align: center; /* Center the content */
+    padding-bottom: 40px; /* Increase space below the content */
+    z-index: 1; /* Places items above the line */
+}
+
+.timeline-marker {
+    position: absolute;
+    top: -5px; /* Position marker slightly above the item */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center marker */
+    width: 12px; /* Slightly larger marker */
+    height: 12px;
+    border-radius: 50%;
+    background-color: #0F67B1; /* Marker color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure marker is above the line */
+}
+
+.timeline-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 15px; /* Space below the marker */
+}
+
+.timeline-title {
+    margin: 0;
+    font-size: 12px; /* Set title font size to 20px */
+    color: #0F67B1; /* Title color */
+}
+
+.timeline-date {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #999; /* Date color */
+}
+
+.timeline-description {
+    margin: 0;
+    line-height: 1.5;
+    color: #333; /* Description color */
+    font-size: 17px; /* Set description font size to 17px */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .timeline-item {
+        min-width: 120px; /* Adjust minimum width for medium screens */
+    }
+
+    .timeline-title {
+        font-size: 20px; /* Maintain title size */
+    }
+
+    .timeline-date {
+        font-size: 0.85rem; /* Slightly smaller date */
+    }
+}
+
+@media (max-width: 992px) {
+    .timeline-item {
+        min-width: 100px; /* Further reduce minimum width for tablets */
+    }
+
+    .timeline-title {
+        font-size: 20px; /* Maintain title size */
+    }
+
+    .timeline-date {
+        font-size: 0.75rem; /* Further reduce date size */
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        padding: 10px; /* Reduce padding for small screens */
+        flex-direction: row; /* Keep items in a horizontal row */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+    }
+
+    .timeline-item {
+        min-width: 150px; /* Ensure items have a minimum width for mobile */
+        margin: 0 10px; /* Margin for horizontal spacing */
+    }
+
+    .timeline-title {
+        font-size: 20px; /* Maintain title size */
+    }
+
+    .timeline-date {
+        font-size: 0.65rem; /* Further reduce date size */
+    }
+
+    .timeline-description {
+        font-size: 17px; /* Maintain description size */
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        padding: 5px; /* Further reduce padding for very small screens */
+    }
+
+    .timeline-item {
+        min-width: 150px; /* Maintain minimum width */
+    }
+
+    .timeline-title {
+        font-size: 20px; /* Maintain title size */
+    }
+
+    .timeline-date {
+        font-size: 0.6rem; /* Further reduce date size */
+    }
+
+    .timeline-description {
+        font-size: 17px; /* Maintain description size */
+    }
+}
+
+.timeline-controls {
+    position: absolute; /* Position controls absolutely */
+    top: 0px; /* Increase distance from the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    display: flex;
+    gap: 10px; /* Increased space between buttons */
+    z-index: 10; /* Ensure controls are above other elements */
+}
+
+.timeline-controls button {
+    background-color: #0F67B1; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 6px 10px; /* Padding for buttons - slightly smaller */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    font-size: 12px; /* Smaller button text size */
+}
+
+.timeline-controls button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+.timeline-controls button:disabled {
+    background-color: #ccc; /* Disabled button color */
+    cursor: not-allowed; /* Not-allowed cursor for disabled buttons */
+}

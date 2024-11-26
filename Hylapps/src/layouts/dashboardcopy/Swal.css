@@ -1,0 +1,19 @@
+.custom-swal {
+  
+ 
+    max-width: 90%; /* Make it responsive */
+}
+
+.custom-swal .swal2-title {
+    font-size: 1.3rem; /* Adjust title font size */
+}
+
+.custom-swal .swal2-content {
+    font-size: 1rem; /* Adjust content font size */
+}
+
+.custom-swal .swal2-confirm, 
+.custom-swal .swal2-cancel {
+    font-size: 0.9rem; /* Adjust button font size */
+    padding: 6px 12px; /* Adjust button padding */
+}

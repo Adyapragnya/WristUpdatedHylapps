@@ -1,0 +1,191 @@
+.alert-form-container {
+    max-width: 100%;
+    margin: 20px auto;
+    margin-top: -30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.alert-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.alert-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.alert-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.date-range {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.alert-form input,
+.alert-form textarea,
+.alert-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.attach-to-vessel {
+    margin-bottom: 15px;
+}
+
+.alert-type-checkboxes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-group button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button-group button[type='submit'] {
+    background-color: #28a745;
+    color: white;
+}
+
+.button-group button[type='button'] {
+    background-color: #dc3545;
+    color: white;
+}
+
+.button-group button:hover {
+    filter: brightness(1.05);
+}
+
+.checkbox-wrapper-46 input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+
+.checkbox-wrapper-46 .cbx {
+    margin: auto;
+    user-select: none;
+    cursor: pointer;
+}
+
+.checkbox-wrapper-46 .cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-46 .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1px solid #9098a9;
+    transition: all 0.2s ease;
+}
+
+.checkbox-wrapper-46 .cbx:hover span:first-child {
+    border-color: #506eec;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+    background: #506eec;
+    border-color: #506eec;
+    animation: wave-46 0.4s ease;
+}
+
+.checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+@keyframes wave-46 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+/* Multi-row style for checkboxes */
+.multi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    align-items: center;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 10px;
+}
+
+.checkbox-wrapper-46 {
+    display: flex;
+    align-items: center;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .alert-form-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .date-range {
+        grid-template-columns: 1fr;
+    }
+
+    .multi-row {
+        grid-template-columns: 1fr 1fr; /* Adjust to 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .alert-form-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .date-range {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .multi-row {
+        grid-template-columns: 1fr; /* Single column on mobile devices */
+        gap: 10px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
