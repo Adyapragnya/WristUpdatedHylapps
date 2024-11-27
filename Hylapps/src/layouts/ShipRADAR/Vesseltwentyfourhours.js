@@ -104,17 +104,7 @@ const Vesseltwentyfourhours = ({ vessels = [], onRowClick }) => {
       cell: (info) => <Box sx={{ textAlign: 'center' }}>{info.getValue()}</Box>,
     },
     {
-      header: 'Agent',
-      accessorKey: 'Agent',
-      cell: (info) => <Box sx={{ textAlign: 'center' }}>{info.getValue()}</Box>,
-    }, {
-      header: 'ETA Date',
-      accessorKey: 'ETADate',
-      cell: (info) => <Box sx={{ textAlign: 'center' }}>{info.getValue()}</Box>,
-    },
-    
-    {
-      header: 'ETA',
+      header: 'Vessel AIS ETA',
       accessorKey: 'ETA',
       cell: (info) => {
         const rawEta = info.getValue();
